@@ -11,11 +11,12 @@ let questionList = ["Who was the Ancient Greek God of the Sun?",
         "Which state was the first capital of the United States?",
         "Which bird is a universal symbol of peace?"];
 
-questions.textContent = "hi";
+questions.textContent = questionList[0];
+input.textContent = answerList[0];
 
 
-
-
-
-let score = 0;
-
+if (input === 0){
+        submitButton.addEventListener('click', () =>{
+                
+        });
+}
