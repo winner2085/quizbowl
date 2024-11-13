@@ -1,20 +1,21 @@
+const scoreContainer = document.querySelector('.score');
 const submitButton = document.querySelector('#submit-button');
 const input = document.querySelector('#input-field');
-const questions = document.querySelector('#questions')
+const questions = document.getElementById('question');
+const title = document.querySelector('.title');
+let answerList = ["Apollo", "10080", "New York", "Dove"];
 
-function changeQuestion() {
-    const questions = [
-        "Who was the Ancient Greek God of the Sun?",
+
+let questionList = ["Who was the Ancient Greek God of the Sun?",
         "How many minutes are in a full week?",
-        "What was the first state?",
-        "Which bird is a universal symbol of peace?"
-    ];
-    let currentIndex = 0
-    
-    submitButton.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % questions.length;
-        submitButton.src = questions[currentIndex];
-    });
-}
+        "Which state was the first capital of the United States?",
+        "Which bird is a universal symbol of peace?"];
 
-changeQuestion()
+questions.textContent = "hi";
+
+
+
+
+
+let score = 0;
+
