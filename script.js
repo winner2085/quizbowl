@@ -2,7 +2,7 @@ const submitButton = document.querySelector('.submit');
 const input = document.querySelector('.input-container');
 const questions = document.querySelector('.questions');
 const title = document.querySelector('.title');
-let scoreContainer = document.querySelector('.score-container');
+const scoreContainer = document.querySelector('.score-container');
 
 let score = 0;
 
@@ -17,8 +17,8 @@ let submitFunction = () =>{
         submitButton.addEventListener('click', () =>{
                 if(input.value === answerList[questionIndex]){
                         questionIndex +- 1;
-                        score +- 1;
-                        questionIndex.textContent = questionList[questionIndex];
+                        score += 1;
+                        questions.textContent = questionList[questionIndex];
                         scoreContainer.textContent = "Score: " + score;
                 }else{
                         score -= 1;
@@ -32,10 +32,10 @@ let submitFunction = () =>{
 let endGame = () =>{
         if (questionIndex > 3){
                 scoreContainer.textContent = "Final Score: " + score;
-                question.textContent = "Great Job, you know your stuff! Play again.";
+                questions.textContent = "Great Job, you know your stuff! Play again.";
                 input.style.display = "none";
                 submitButton.style.display = "none";
-        }
+        };
 }
 
 submitFunction ();
