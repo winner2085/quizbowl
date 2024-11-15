@@ -2,7 +2,7 @@ const submitButton = document.querySelector('.submit');
 const input = document.querySelector('.input-container');
 const questions = document.querySelector('.questions');
 const title = document.querySelector('.title');
-const scoreContainer = document.querySelector('.score-container');
+let scoreContainer = document.querySelector('.score-container');
 
 let score = 0;
 
