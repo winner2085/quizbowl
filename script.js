@@ -6,9 +6,19 @@ let scoreContainer = document.querySelector('.score-container');
 
 let score = 0;
 
-let questionList = ['Who was the Ancient Greek God of the Sun?', 'How many minutes are in a full week?', 'Which state was the first capital of the United States?', 'Which bird is a universal symbol of peace?'];
+let questionList = ['Who was the Ancient Greek God of the Sun?',
+        'How many minutes are in a full week?',
+        'How many stars are on the American Flag?',
+        'Which bird is a universal symbol of peace?',
+        'What is James Bonds code name?',
+        'What species of fish is Nemo?',
+        'What is an eight-sided shape called?',
+        'Who painted the Mona Lisa?',
+        'What is the main ingridient in guacamole?',
+        'Who was the first president of the United States?'
+];
 
-let answerList = ['Apollo', '10080', 'York, PA', 'Dove'];
+let answerList = ['Apollo', '10080', '50', 'Dove', '007', 'Clownfish', 'Octagon', 'Leonardo da Vinci', 'Avacado', 'George Washington'];
 
 let questionIndex = 0;
 questions.textContent = questionList[questionIndex];
@@ -31,7 +41,7 @@ let submitFunction = () =>{
 }
 
 let endGame = () =>{
-        if (questionIndex > 3){
+        if (questionIndex > 9){
                 scoreContainer.textContent = "Final Score: " + score;
                 questions.textContent = "Great Job, you know your stuff! Play again.";
                 input.style.display = "none";
